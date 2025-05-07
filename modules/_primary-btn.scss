@@ -1,0 +1,22 @@
+/* Primary Button */
+
+@use 'variables';
+
+.primary-btn {
+    display: inline-block;
+    padding: variables.$padding-15-30;
+    cursor: pointer;
+
+    font-size: variables.$malaSlova;
+    font-weight: bold;
+    color: variables.$belaBoja;
+
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, variables.$logoBoja, #feb47b);
+
+    &:hover {
+        box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.4);
+    }
+}

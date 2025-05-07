@@ -1,0 +1,43 @@
+/* Header */
+@use 'variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: variables.$padding-15-30;
+    box-shadow: variables.$tamnaSenka;
+    margin-bottom: 10px;
+
+    .logo {
+        font-size: variables.$malaSlova;
+        font-weight: bold;
+        color: variables.$logoBoja;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+
+        @include variables.responsive(576px){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+
+            &:hover {
+                color: variables.$logoBoja;
+            }
+        }
+    }
+}

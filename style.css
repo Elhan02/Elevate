@@ -1,17 +1,5 @@
 /* Responsive Mixin and vars */
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-/* Navbar */
+/* Header */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -141,6 +129,18 @@ h2 {
   padding: 20px;
   background: #222;
   color: white;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

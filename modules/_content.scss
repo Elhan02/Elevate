@@ -1,0 +1,82 @@
+/* Main Section */
+
+@use 'variables';
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10px;
+
+    @include variables.responsive(576px){
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+    .content {
+        width: 50%;
+
+    }
+
+    h1 {
+        font-size: 48px;
+        color: variables.$logoBoja;
+    }
+
+    p {
+        font-size: variables.$malaSlova;
+    }
+
+    img {
+        width: 40%;
+
+        @include variables.responsive(576px){
+            width: 60%;
+            margin-top: 50px;
+        }
+    }
+}
+
+/* Features & Plans Sections */
+.features {
+    background: #f3f3f3;
+}
+
+.center-section {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.card-list {
+    display: flex;
+    justify-content: space-between;
+
+    @include variables.responsive(992px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+}
+
+.card {
+    background: variables.$belaBoja;
+    padding: 20px;
+    width: 27%;
+    border-radius: 10px;
+    box-shadow: variables.$tamnaSenka;
+
+    @include variables.responsive(992px){
+        width: 80%;
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: variables.$belaBoja;
+}
