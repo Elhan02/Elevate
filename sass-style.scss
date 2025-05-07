@@ -1,3 +1,11 @@
+/* Responsive Mixin and vars */
+
+@mixin responsive($max-screen-size) {
+    @media  (max-width: $max-screen-size) {
+        @content;
+    }
+}
+
 $malaSlova: 18px;
 $logoBoja: #ff7e5f;
 $belaBoja: white;
@@ -111,16 +119,25 @@ h2 {
     display: flex;
     justify-content: space-between;
 
-    .card {
-        background: $belaBoja;
-        padding: 20px;
-        width: 27%;
-        border-radius: 10px;
-        box-shadow: $tamnaSenka;
+    @include responsive(992px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
     }
+
 }
 
+.card {
+    background: $belaBoja;
+    padding: 20px;
+    width: 27%;
+    border-radius: 10px;
+    box-shadow: $tamnaSenka;
 
+    @include responsive(992px){
+        width: 80%;
+    }
+}
 
 /* Footer */
 .footer {
@@ -128,19 +145,4 @@ h2 {
     padding: 20px;
     background: #222;
     color: $belaBoja;
-}
-
-/* Responsive */
-@media screen and (max-width: 992px) {
-    .card-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-
-        .card {
-            width: 80%;
-        }
-    }
-
-
 }
